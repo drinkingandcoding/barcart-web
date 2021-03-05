@@ -23,5 +23,14 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "trailing-comma": [true, {
+    "singleline": "never",
+    "multiline": {
+      "objects": "never",
+      "arrays": "never",
+      "functions": "never",
+      "typeLiterals": "ignore"
+    }
+  }]
 }

@@ -1,3 +1,6 @@
-.sh-masthead {
-
+.bc-masthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg.bc-logo { width: 150px;}
 }
