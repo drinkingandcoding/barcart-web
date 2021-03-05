@@ -1,0 +1,45 @@
+@mixin buttonVariants($theme) {
+    display: block;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 20px;
+    min-width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+
+    @if $theme == 'ghost' {
+        background: none;
+        border: 1px solid var(--bc-global-color__white);
+        color: var(--bc-global-color__white);
+        .bc-button__content { color: var(--bc-a-light-color); }
+    }
+    @if $theme == 'light' {
+        background: var(--bc-global-color__white);
+        color: var(--bc-global-color__black);
+        border: none;
+        .bc-button__content { color: var(--bc-a-dark-color); }
+    }
+    @if $theme == 'dark' {
+        background: var(--bc-global-color__black);
+        color: var(--bc-global-color__white);
+        border: none;
+        .bc-button__content { color: var(--bc-a-light-color); }
+    }
+}
+
+.bc-button-light { @include buttonVariants(light) }
+.bc-button-dark { @include buttonVariants(dark) }
+.bc-button-ghost { @include buttonVariants(ghost) }
+.bc-button-link {
+    border: none;
+    background: none;
+    color: var(--bc-global-color__white);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    &:hover {
+        text-decoration: underline;
+    }
+}

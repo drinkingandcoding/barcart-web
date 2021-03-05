@@ -1,0 +1,37 @@
+:root {
+
+    //Todo delete
+    --bc-global-color__black: #242423;
+    --bc-global-color__grey-100: #333533;
+    --bc-global-color__grey-200: #CFDBD5;
+    --bc-global-color__accent: #F5CB5C;
+    --bc-global-color__white: #e8eddf;
+    --bc-global-color__bcadow: #4e4f4e;
+
+    //Colors
+    --bc-global-color__light-100: #FFE8D6;
+    --bc-global-color__light-200: #DDBEA9;
+    --bc-global-color__light-300: #CB997E;
+
+    --bc-global-color__dark-100: #B7B7A4;
+    --bc-global-color__dark-100: #A5A58D;
+    --bc-global-color__dark-100: #6B705C;
+
+    --bc-a-light-color: var(--bc-global-color__white);
+    --bc-a-light-color__hover: var(--bc-global-color__grey-200);
+    --bc-a-light-color__focus: var(--bc-global-color__grey-200);
+    --bc-a-light-color__visited: var(--bc-global-color__grey-200);
+
+    --bc-a-dark-color: var(--bc-global-color__black);
+    --bc-a-dark-color__hover: var(--bc-global-color__grey-100);
+    --bc-a-dark-color__focus: var(--bc-global-color__grey-100);
+    --bc-a-dark-color__visited: var(--bc-global-color__grey-100);
+
+    --bc-button-color__active: #bfbfbf;
+
+    --bc-global-padding: 20px;
+    --bc-global-padding__horizontal: 32px;
+    --bc-global-padding__vertical: var(--bc-global-padding);
+
+    --bc-global-border-radius: 5px;
+}
