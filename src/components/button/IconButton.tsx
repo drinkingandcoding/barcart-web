@@ -1,14 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link, } from "react-router-dom";
 
 import "./IconButton.scss";
 
 interface IconButton {
-    children: any,
+    children: ReactNode,
     variant?: "light" | "dark",
     to?: string,
     href?: string,
-    onClick?: any
+    onClick?: () => void
 }
 
 const IconButton: React.FC<IconButton> = (props) => {

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import "./Content.scss";
 
 interface ContentProps {
-    children: any
+    children: ReactNode
 }
 
 const Content: React.FC<ContentProps> = (props) => {

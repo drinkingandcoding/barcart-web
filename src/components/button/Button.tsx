@@ -1,14 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link, } from "react-router-dom";
 
 import "./Button.scss";
 
 interface ButtonProps {
-    children: any,
+    children: ReactNode,
     variant?: "light" | "dark" | "ghost",
     to?: string,
     href?: string,
-    onClick?: any
+    onClick?: () => void
 }
 
 const Button: React.FC<ButtonProps> = (props) => {

@@ -1,10 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import "./Main.scss";
 
 interface MainProps {
-    children: any,
-    isLanding?: boolean
+    children: ReactNode
 }
 
 const Main: React.FC<MainProps> = (props) => {

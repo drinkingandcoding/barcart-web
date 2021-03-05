@@ -6,7 +6,7 @@ import Home from "./routes/Home";
 
 import "./App.scss";
 
-const App = () => {
+const App: React.FC = () => {
 
   return (
     <Fragment>
