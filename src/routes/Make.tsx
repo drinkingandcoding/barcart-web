@@ -1,11 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import Main from "../components/main/Main";
+import { Card, CardHead, CardBody, Main, List, Empty, Button } from "../components";
+
 import { getParams } from "../utils";
 import { makeByName } from "barcart/dist";
-import { Card, Empty, Button } from 'antd';
-import List from '../components/list/List';
 
 import './Make.scss';
 
@@ -33,24 +32,27 @@ const MakePage: React.FC = () => {
   return (
     <Main name='make'>
       { drink ?
-        <Card title={drink.name} className="bc-card">
-          <List title='glass'>
-            {drink.glass}
-          </List>
-          <List title='ingredients'>
-            { 
-              drink?.ingredients?.map((i, index) => <li key={index}> {generateIngredientList(i)} </li>)
-            }
-          </List>
-          <List title='prep'>
-            {drink.preparation}
-          </List>
-          <List title='garnish'>
-            {drink.garnish}
-          </List>
+        <Card>
+          <CardHead title={drink.name}/>
+          <CardBody>
+            <List title='glass'>
+              {drink.glass}
+            </List>
+            <List title='ingredients'>
+              { 
+                drink?.ingredients?.map((i, index) => <li key={index}> {generateIngredientList(i)} </li>)
+              }
+            </List>
+            <List title='prep'>
+              {drink.preparation}
+            </List>
+            <List title='garnish'>
+              {drink.garnish}
+            </List>
+          </CardBody>
         </Card>
-        : <Empty description={`There is no drink named ${input}`}>
-            <Button type="primary">Go back</Button>
+        : <Empty title='oops' description={`There is no drink named ${input}`}>
+            <Button to='./'>Go back</Button>
           </Empty>
       }
     </Main>

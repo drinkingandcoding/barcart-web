@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Masthead.scss";
-import Logo from "../logo/Logo";
+import { Logo } from "../logo";
 
 const Masthead: React.FC = () => {
   return (

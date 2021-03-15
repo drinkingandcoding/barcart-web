@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "../components/main/Main";
+import { Main } from "../components";
 
 import { useHistory } from "react-router-dom";
 import { Form, Input, Button } from 'antd';
