@@ -1,0 +1,7 @@
+.bc-page-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  button + button { margin-top: 15px; }
+}
