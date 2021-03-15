@@ -1,23 +1,36 @@
 import React, { useState } from "react";
-
 import Main from "../components/main/Main";
 
-import { Button } from 'antd';
+import { useHistory } from "react-router-dom";
+import { Form, Input, Button } from 'antd';
 
 import './Home.scss';
 
 const Home: React.FC = () => {
 
-  const [step, setStep] = useState(0);
+  const [form] = Form.useForm();
+  const history = useHistory();
 
-  const nextStep = () => {setStep(step + 1); };
-  const previousStep = () => { setStep(step - 0); };
-  
+  const onFinish = (values: any) => {
+    console.log(values);
+    history.push({
+      pathname: '/make',
+      search: `?drink=${values.drink}`,  // query string
+    });
+  };
+
   return (
     <Main name='home'>
-      <Button type='primary'> I know what I want to make </Button>
-      <Button type='primary'> Help me find a drink </Button>
-      <Button type='primary'> I'm feeling lucky </Button>
+      <Form form={form} layout="inline" onFinish={onFinish}>
+        <Form.Item name="drink" label="Drink">
+          <Input />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
     </Main>
   );
 };

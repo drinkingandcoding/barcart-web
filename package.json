@@ -16,7 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
     "antd": "^4.13.1",
-    "barcart": "^0.0.2",
+    "barcart": "^0.0.8",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

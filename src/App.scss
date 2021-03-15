@@ -1,22 +1,16 @@
 :root {
 
-    //Todo delete
+    // globals
     --bc-global-color__black: #242423;
     --bc-global-color__grey-100: #333533;
     --bc-global-color__grey-200: #CFDBD5;
-    --bc-global-color__accent: #F5CB5C;
     --bc-global-color__white: #e8eddf;
-    --bc-global-color__bcadow: #4e4f4e;
+    --bc-global-color__shadow: #0f130f;
 
-    //Colors
-    --bc-global-color__light-100: #ffe9d9;
-    --bc-global-color__light-200: #DDBEA9;
-    --bc-global-color__light-300: #CB997E;
+    // backgrounds
+    --bc-l-background-color: var(--bc-global-color__grey-200);
 
-    --bc-global-color__dark-100: #B7B7A4;
-    --bc-global-color__dark-200: #A5A58D;
-    --bc-global-color__dark-300: #6B705C;
-
+    // links
     --bc-a-light-color: var(--bc-global-color__white);
     --bc-a-light-color__hover: var(--bc-global-color__grey-200);
     --bc-a-light-color__focus: var(--bc-global-color__grey-200);
@@ -27,11 +21,18 @@
     --bc-a-dark-color__focus: var(--bc-global-color__grey-100);
     --bc-a-dark-color__visited: var(--bc-global-color__grey-100);
 
+    // buttons
     --bc-button-color__active: #bfbfbf;
 
+
+    // spacers
     --bc-global-padding: 20px;
     --bc-global-padding__horizontal: 32px;
     --bc-global-padding__vertical: var(--bc-global-padding);
 
+    // cards
     --bc-global-border-radius: 5px;
+    .bc-card {
+        border-radius: var(--bc-global-border-radius);
+    }
 }
