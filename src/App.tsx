@@ -1,5 +1,5 @@
 import React, { Fragment, } from "react";
-import { Route, Switch, Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import MastHead from "./components/masthead/Masthead";
 import Home from "./routes/Home";

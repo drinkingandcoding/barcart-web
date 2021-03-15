@@ -1,3 +1,3 @@
-export const getParams = (param: string) => {
+export const getParams = (param: string):string => {
   return param.split("=")[1];
 }
