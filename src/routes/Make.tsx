@@ -62,7 +62,7 @@ const MakePage: React.FC = () => {
               }
             </List>
             <List title={`🔧 ${String(drink.preparation)}`}/>
-            <List title={`🥃 Top with ${drink.garnish?.toLowerCase()}`}/>
+            {drink.garnish && <List title={`🥃 Top with ${drink.garnish.toLowerCase()}`}/>}
           </CardBody>
           <CardFooter>
             <Button to='./' variant='dark'> Search for another </Button>
