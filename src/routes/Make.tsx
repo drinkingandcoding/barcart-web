@@ -26,7 +26,9 @@ const MakePage: React.FC = () => {
   const drink = makeByName(input)[0];
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const shareString = `Check out this recipe for a ${drink.name} on Barcart: ${window.location}`;
+  const generateShareString = (drink:string):string => {
+    return `Check out this recipe for a ${drink} on Barcart: ${window.location}`;
+  } 
 
   const generateIngredientList = (i:IngredientInterface) => {
     if(i.amount) {
@@ -83,8 +85,8 @@ const MakePage: React.FC = () => {
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title='Share with your friends!'>
             <ModalBody>
               <div className='bc-targets'>
-                <SplitButton icon={<Twitter/>} href={encodeURI(`https://twitter.com/intent/tweet?text=${shareString}`)}>Twitter</SplitButton>
-                <SplitButton icon={<Mail/>} href={`mailto:?subject=${drink.name} Recipe&body=${shareString}`}>E-mail</SplitButton>
+                <SplitButton icon={<Twitter/>} href={encodeURI(`https://twitter.com/intent/tweet?text=${generateShareString(drink.name)}`)}>Twitter</SplitButton>
+                <SplitButton icon={<Mail/>} href={`mailto:?subject=${drink.name} Recipe&body=${generateShareString(drink.name)}`}>E-mail</SplitButton>
                 <SplitButton icon={<Copy/>} onClick={() => copyUrl()}>Copy URL</SplitButton>
               </div>
             </ModalBody>
