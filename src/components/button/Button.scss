@@ -1,4 +1,5 @@
 @mixin buttonVariants($theme) {
+    display: flex;
     border-radius: var(--bc-global-border-radius);
     text-align: center;
     font-size: 14px;
@@ -36,7 +37,7 @@
 .bc-button-ghost { @include buttonVariants(ghost) }
 .bc-button-icon {
     @include buttonVariants(ghost);
-    padding: 5px 10px;
+    padding: 10px 15px;
 }
 .bc-button-link {
     border: none;
@@ -48,4 +49,8 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.bc-button__content {
+    display: flex;
 }

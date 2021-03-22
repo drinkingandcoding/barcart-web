@@ -14,13 +14,19 @@
     margin-bottom: 20px;
   }
 
-  @media only screen and (max-width: 900px) {
-    .bc-card {
-      width: 80%;
-    }
+  .bc-targets {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    gap: 15px;
+    justify-content: center;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 1000px) {
+    .bc-card { width: 70%; }
+    .bc-modal-content { width: 40%; }
+  }
+
+  @media only screen and (max-width: 776px) {
     padding-top: 0;
     .bc-card {
       width: 90%;
@@ -33,6 +39,21 @@
         }
         a + a { margin-top: 10px; }
       }
+    }
+    .bc-modal-content {
+      width: 80%;
+    }
+    .bc-targets{
+      grid-template-columns: max-content max-content max-content;
+    }
+  }
+
+  @media only screen and (max-width: 564px) {
+    .bc-targets {
+      display: grid;
+      grid-template-columns: max-content;
+      gap: 15px;
+      justify-content: center;
     }
   }
 }

@@ -1,0 +1,52 @@
+/* The Modal (background) */
+.bc-modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.726); /* Black w/ opacity */
+}
+
+.bc-modal-closed {
+  display: none; /* Hidden by default */
+}
+
+.bc-modal-open {
+  display: block;
+}
+
+
+.bc-modal-content {
+  --bc-c-card--padding: var(--bc-global-padding);
+
+  background: #ebece9;
+  border-radius: var(--bc-global-border-radius);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04), 0 3px 6px rgba(0, 0, 0, 0.06);
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bc-global-color__grey-200);
+    padding: var(--bc-c-card--padding);
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  &-body {
+    padding: var(--bc-c-card--padding);
+  }
+
+  &-footer {
+    border-top: 1px solid var(--bc-global-color__grey-200);
+    padding: var(--bc-c-card--padding);
+  }
+}
