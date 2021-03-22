@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+html, body { height: 100% }
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -14,14 +16,9 @@ code {
 }
 
 #root { 
-  height: 100vh;
   z-index: -101;
   display: grid;
   grid-template: 100px / auto;
-
-  @media only screen and (max-width: 600px) {
-    grid-template: 140px / auto;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
