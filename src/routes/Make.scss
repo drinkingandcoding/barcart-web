@@ -1,7 +1,59 @@
 .bc-page-make {
 
   display: flex;
-  align-items: center;
   justify-content: center;
-  .bc-card { width: 80%; }
+  height: max-content;
+  padding-top: 75px;
+  .bc-card { 
+    width: 60%;
+    &-footer {
+      display: flex;
+      justify-content: center;
+      a + a { margin-left: 15px; }
+    }
+    margin-bottom: 20px;
+  }
+
+  .bc-targets {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .bc-card { width: 70%; }
+    .bc-modal-content { width: 40%; }
+  }
+
+  @media only screen and (max-width: 776px) {
+    padding-top: 0;
+    .bc-card {
+      width: 90%;
+      &-footer {
+        flex-direction: column;
+        align-items: center;
+        a.bc-button {
+          margin-left: 0;
+          width: max-content;
+        }
+        a + a { margin-top: 10px; }
+      }
+    }
+    .bc-modal-content {
+      width: 80%;
+    }
+    .bc-targets{
+      grid-template-columns: max-content max-content max-content;
+    }
+  }
+
+  @media only screen and (max-width: 564px) {
+    .bc-targets {
+      display: grid;
+      grid-template-columns: max-content;
+      gap: 15px;
+      justify-content: center;
+    }
+  }
 }

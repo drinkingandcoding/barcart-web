@@ -1,19 +1,22 @@
 @mixin buttonVariants($theme) {
-    display: block;
-    border-radius: 2px;
+    display: flex;
+    border-radius: var(--bc-global-border-radius);
     text-align: center;
     font-size: 14px;
-    padding: 10px 20px;
-    min-width: 150px;
-    transition: all 0.5s;
+    padding: 6px 20px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
     text-decoration: none;
+    position: relative;
+    top: 0;
+    &:hover { top: -2px; }
+    &:active { border-radius: 8px; }
 
     @if $theme == 'ghost' {
         background: none;
-        border: 1px solid var(--bc-global-color__white);
-        color: var(--bc-global-color__white);
-        .bc-button__content { color: var(--bc-a-light-color); }
+        border: 1px solid var(--bc-global-color__black);
+        color: var(--bc-global-color__black);
+        .bc-button__content { color: var(--bc-global-color__black); }
     }
     @if $theme == 'light' {
         background: var(--bc-global-color__white);
@@ -32,6 +35,10 @@
 .bc-button-light { @include buttonVariants(light) }
 .bc-button-dark { @include buttonVariants(dark) }
 .bc-button-ghost { @include buttonVariants(ghost) }
+.bc-button-icon {
+    @include buttonVariants(ghost);
+    padding: 10px 15px;
+}
 .bc-button-link {
     border: none;
     background: none;
@@ -42,4 +49,8 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.bc-button__content {
+    display: flex;
 }

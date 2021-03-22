@@ -1,34 +1,35 @@
-import React, { ReactNode } from "react";
-import { Link, } from "react-router-dom";
+import React, { ReactNode } from 'react';
+import { Link, } from 'react-router-dom';
 
-import "./Button.scss";
+import './Button.scss';
 
 interface ButtonProps {
     children: ReactNode,
-    variant?: "light" | "dark" | "ghost",
+    variant?: 'light' | 'dark' | 'ghost' | 'icon',
     to?: string,
     href?: string,
+    className?: string,
     onClick?: () => void
 }
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button: React.FC<ButtonProps> = ({ children, variant, to, href, className, onClick}) => {
 
-  const buttonContent = <span className={"bc-button__content"}> { props.children } </span>;
+  const buttonContent = <span className='bc-button__content'> { children } </span>;
 
   return (
     <React.Fragment>
-      { props.to &&
-            <Link to={props.to} className={`bc-button bc-button-${props.variant}`}>
+      { to &&
+            <Link to={to} className={`bc-button bc-button-${variant} ${className}}`}>
               { buttonContent }
             </Link>
       }
-      { props.href &&
-            <a href={props.href}className={`bc-button bc-button-${props.variant}`}>
+      { href &&
+            <a href={href} className={`bc-button bc-button-${variant} ${className}`}>
               { buttonContent }
             </a>
       }
-      { props.onClick &&
-            <button onClick={props.onClick} className={"bc-button bc-button-link"}>
+      { onClick &&
+            <button onClick={onClick} className={`bc-button bc-button-${variant} ${className}`}>
               { buttonContent }
             </button>
       }
@@ -39,5 +40,5 @@ const Button: React.FC<ButtonProps> = (props) => {
 export default Button;
 
 Button.defaultProps = {
-  variant: "light",
+  variant: 'light',
 };

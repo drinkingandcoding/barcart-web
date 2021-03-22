@@ -1776,6 +1776,11 @@
   resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.1.1.tgz"
   integrity sha512-giAlZwstKbmvMk1OO7WXSj4OZ0keXAcl2TQq4LWHiiPH2ByaH7WeUzng+Qej8UPxxv+8lRTuouo0iaNDBuzIBA==
 
+"@types/indefinite@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@types/indefinite/-/indefinite-2.3.0.tgz#a01558845cd8bf759c5564b9d762b0806432742d"
+  integrity sha512-vUbzBClWsKK3ET0bk8P3AaFaSpAObT3FeQqJcAM1tl6QSjDvK1si2Ky26hz4igRfu3l78nna9GXdVIxEpX9M+w==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.3.tgz"
@@ -6096,6 +6101,11 @@ in-publish@^2.0.0:
   resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.1.tgz"
   integrity sha512-oDM0kUSNFC31ShNxHKUyfZKy8ZeXZBWMjMdZHKLOk13uvT27VTL/QzRGfRUcevJhpkZAvlhPYuXkF7eNWrtyxQ==
 
+indefinite@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/indefinite/-/indefinite-2.4.1.tgz#6970cfdd373dde4e394dd5f783e59a7c0fb13637"
+  integrity sha512-4C1k983crWkOu4tfmx8by1jQ0xBLBo0EhNV1WsRem2y+IbzLmPkYycjrQe399heo3bZ5OYpImQo2o85vQ0HkSQ==
+
 indent-string@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-2.1.0.tgz"
@@ -9978,6 +9988,11 @@ react-feather@^2.0.9:
   integrity sha512-yMfCGRkZdXwIs23Zw/zIWCJO3m3tlaUvtHiXlW+3FH7cIT6fiK1iJ7RJWugXq7Fso8ZaQyUm92/GOOHXvkiVUw==
   dependencies:
     prop-types "^15.7.2"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

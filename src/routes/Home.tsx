@@ -1,10 +1,11 @@
 import React from "react";
-import Main from "../components/main/Main";
+import { Main } from "../components";
 
 import { useHistory } from "react-router-dom";
 import { Form, Input, Button } from 'antd';
 
 import './Home.scss';
+import { makeByRandom } from "barcart/dist";
 
 interface ValuesInterface {
   drink: string;
@@ -16,10 +17,12 @@ const Home: React.FC = () => {
   const history = useHistory();
 
   const onFinish = (values:ValuesInterface) => {
-    console.log(values);
+
+    const drink = values.drink || makeByRandom()[0].name;
+
     history.push({
       pathname: '/make',
-      search: `?drink=${values.drink}`,  // query string
+      search: `?drink=${drink}`,  // query string
     });
   };
 
