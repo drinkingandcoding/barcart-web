@@ -1,14 +1,31 @@
 .bc-page-make {
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  height: max-content;
+  padding-top: 75px;
   .bc-card { 
     width: 80%;
     &-footer {
       display: flex;
       justify-content: center;
-      * + * { margin-left: 15px; }
+      a + a { margin-left: 15px; }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 20px;
+    .bc-card {
+      width: 90%;
+      &-footer {
+        flex-direction: column;
+        align-items: center;
+        a.bc-button {
+          margin-left: 0;
+          width: max-content;
+        }
+        a + a { margin-top: 10px; }
+      }
     }
   }
 }
