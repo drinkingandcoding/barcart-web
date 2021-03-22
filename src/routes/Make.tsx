@@ -1,10 +1,12 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import { Card, CardHead, CardBody, Main, List, Empty, Button, CardFooter, IconButton } from "../components";
+import { Card, CardHead, CardBody, Main, List, Empty, Button, CardFooter } from "../components";
 
 import { getParams } from "../utils";
 import { makeByName, makeByRandom } from "barcart/dist";
+
+import { FiShare } from "react-icons/fi";
 import a from 'indefinite';
 
 import './Make.scss';
@@ -53,7 +55,7 @@ const MakePage: React.FC = () => {
     <Main name='make'>
       { drink ?
         <Card>
-          <CardHead title={drink.name} action={<IconButton variant='dark' onClick={() => shareDrink}>share</IconButton>}/>
+          <CardHead title={drink.name} action={<Button variant='icon' onClick={() => shareDrink}><FiShare/></Button>}/>
           <CardBody>
             <List icon='🍸' title={`Grab ${a(drink.glass)} glass`}/>
             <List icon='📖' title="You'll need:">

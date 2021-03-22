@@ -5,7 +5,7 @@ import "./Button.scss";
 
 interface ButtonProps {
     children: ReactNode,
-    variant?: "light" | "dark" | "ghost",
+    variant?: "light" | "dark" | "ghost" | "icon",
     to?: string,
     href?: string,
     onClick?: () => void
