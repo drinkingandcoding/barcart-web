@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = (props) => {
             </a>
       }
       { props.onClick &&
-            <button onClick={props.onClick} className={"bc-button bc-button-link"}>
+            <button onClick={props.onClick} className={`bc-button bc-button-${props.variant}`}>
               { buttonContent }
             </button>
       }

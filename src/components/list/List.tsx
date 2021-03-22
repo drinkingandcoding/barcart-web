@@ -3,17 +3,19 @@ import React, { ReactNode } from "react";
 import './List.scss'
 
 interface ListProps {
-  children: ReactNode
+  children?: ReactNode
   title: string
 }
 const List: React.FC<ListProps> = ({ title, children }) => {
   return (
-    <>
-      <h3> {title} </h3>
-      <ol className="bc-list">
-        {children}
-      </ol>
-    </>
+    <section className='bc-list'>
+      <h3 className='bc-list-title'> {title} </h3>
+      { children && 
+        <ol className="bc-list-items">
+          {children}
+        </ol>
+      }
+    </section>
   )
 }
 
