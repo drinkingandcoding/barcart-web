@@ -5,13 +5,19 @@
   height: max-content;
   padding-top: 75px;
   .bc-card { 
-    width: 80%;
+    width: 60%;
     &-footer {
       display: flex;
       justify-content: center;
       a + a { margin-left: 15px; }
     }
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .bc-card {
+      width: 80%;
+    }
   }
 
   @media only screen and (max-width: 600px) {
