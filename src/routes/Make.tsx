@@ -55,14 +55,14 @@ const MakePage: React.FC = () => {
         <Card>
           <CardHead title={drink.name} action={<IconButton variant='dark' onClick={() => shareDrink}>share</IconButton>}/>
           <CardBody>
-            <List title={`🍸 Grab ${a(drink.glass)} glass`}/>
-            <List title="📖 You'll need:">
+            <List icon='🍸' title={`Grab ${a(drink.glass)} glass`}/>
+            <List icon='📖' title="You'll need:">
               { 
                 drink?.ingredients?.map((i, index) => <li key={index}> {generateIngredientList(i)} </li>)
               }
             </List>
-            <List title={`🔧 ${String(drink.preparation)}`}/>
-            {drink.garnish && <List title={`🥃 Top with ${drink.garnish.toLowerCase()}`}/>}
+            <List icon='🔧' title={`${String(drink.preparation)}`}/>
+            {drink.garnish && <List icon='🥃' title={`Top with ${drink.garnish.toLowerCase()}`}/>}
           </CardBody>
           <CardFooter>
             <Button to='./' variant='dark'> Search for another </Button>

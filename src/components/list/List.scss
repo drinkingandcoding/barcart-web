@@ -3,5 +3,10 @@
   &-items {
     list-style-type: circle;
     margin-bottom: 0;
+    padding-left: 13px;
+  }
+  &-withIcon {
+    display: grid;
+    grid-template-columns: 30px auto;
   }
 }
