@@ -1,5 +1,5 @@
 @mixin buttonVariants($theme) {
-    border-radius: 2px;
+    border-radius: var(--bc-global-border-radius);
     text-align: center;
     font-size: 14px;
     padding: 6px 20px;
