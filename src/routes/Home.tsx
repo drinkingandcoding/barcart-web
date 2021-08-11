@@ -1,43 +1,33 @@
-import React from "react";
-import { Main } from "../components";
-
-import { useHistory } from "react-router-dom";
-import { Form, Input, Button } from 'antd';
+import React, { useState } from "react";
+import { Main, Search, Button, Ingredients } from "../components";
 
 import './Home.scss';
-import { makeByRandom } from "barcart/dist";
-
-interface ValuesInterface {
-  drink: string;
-}
+import { generateRandomDrink } from '../utils';
 
 const Home: React.FC = () => {
 
-  const [form] = Form.useForm();
-  const history = useHistory();
-
-  const onFinish = (values:ValuesInterface) => {
-
-    const drink = values.drink || makeByRandom()[0].name;
-
-    history.push({
-      pathname: '/make',
-      search: `?drink=${drink}`,  // query string
-    });
-  };
+  const [ searchByType, setSearchByType ] = useState("name");
 
   return (
     <Main name='home'>
-      <Form form={form} layout="inline" onFinish={onFinish}>
-        <Form.Item name="drink" label="Drink">
-          <Input />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
+      { searchByType === "name" && 
+        <>
+          <Search/>
+          <div className='bc-search-footer'>
+            <Button variant='ghost' onClick={() => setSearchByType("ingredient")}> Search by ingredients </Button>
+            <Button to={`/make?drink=${generateRandomDrink()}`} variant='ghost'> Pick something random </Button>
+          </div>
+        </>
+      }
+      { searchByType === "ingredient" && 
+        <>
+          <Ingredients/>
+          <div className='bc-search-footer'>
+            <Button variant='ghost' onClick={() => setSearchByType("name")}> Search by name </Button>
+            <Button to={`/make?drink=${generateRandomDrink()}`} variant='ghost'> Pick something random </Button>
+          </div>
+        </>
+      }
     </Main>
   );
 };

@@ -1,0 +1,50 @@
+.bc-search {
+  display: grid;
+  grid-template:
+                "label label"
+                "input button";
+  &-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: label;
+    visibility: hidden;
+    height: 0;
+  }
+  &-input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--bc-global-color__black);
+    font-size: 18px;
+    padding-top: 10px;
+    grid-area: input;
+  }
+  &-submit {
+    margin-left: 18px;
+    grid-area: button;
+  }
+}
+
+.ingredient-list {
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  height: min-content;
+  max-height: 350px;
+  overflow-y: scroll;
+  border-radius: var(--bc-global-border-radius) var(--bc-global-border-radius) 0 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04), 0 3px 6px rgba(0, 0, 0, 0.06);
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+  }
+}
+
+.bc-search-submit {
+  margin-top: var(--bc-global-padding);
+}

@@ -6,4 +6,6 @@ export * from './logo';
 export * from './main';
 export * from './masthead';
 export * from './empty';
-export * from './modal'
+export * from './modal';
+export * from './search';
+export * from './ingredients';

@@ -4,13 +4,15 @@ import { useHistory } from "react-router-dom";
 import { Card, CardHead, CardBody, Main, List, Empty, Button, CardFooter, Modal, ModalBody, SplitButton } from "../components";
 
 import { getParams } from "../utils";
-import { makeByName, makeByRandom } from "barcart/dist";
+import { makeByName } from "barcart/dist";
 
 import { FiShare } from "react-icons/fi";
 import a from 'indefinite';
 
 import './Make.scss';
 import { Copy, Mail, Twitter } from "react-feather";
+
+import { generateRandomDrink } from '../utils';
 
 interface IngredientInterface {
   unit?: string | null;
@@ -36,11 +38,6 @@ const MakePage: React.FC = () => {
     } else {
       return `${i.special}`;
     }
-  }
-
-  const generateRandomDrink = ():string => {
-    const drink = makeByRandom()[0];
-    return(drink.name.toLowerCase());
   }
 
   const shareDrink = () => {

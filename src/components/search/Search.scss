@@ -1,0 +1,25 @@
+.bc-search {
+  display: grid;
+  grid-template:
+                "label label"
+                "input button";
+  &-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: label;
+    visibility: hidden;
+    height: 0;
+  }
+  &-input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--bc-global-color__black);
+    font-size: 18px;
+    padding-top: 10px;
+    grid-area: input;
+  }
+  &-submit {
+    margin-left: 18px;
+    grid-area: button;
+  }
+}
